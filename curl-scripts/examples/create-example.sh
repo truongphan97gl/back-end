@@ -7,7 +7,8 @@ curl "http://localhost:4741/examples" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{
     "example": {
-      "text": "'"${TEXT}"'"
+      "text": "'"${TEXT}"'",
+      "token": "'"${TOKEN}"'"
     }
   }'
 
