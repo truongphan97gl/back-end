@@ -1,5 +1,5 @@
 class EventsController < ProtectedController
-  before_action :set_event, only: [:show, :update, :destroy]
+  before_action :set_event, only: %i[show update destroy]
 
   # GET /events
   def index

@@ -2,7 +2,6 @@
 
 class ExamplesController < ApplicationRecord
   before_action :set_example, only: %i[update destroy]
-  before_action :query_string_authenticate
   # GET /examples
   # GET /examples.json
   def index
@@ -55,10 +54,5 @@ class ExamplesController < ApplicationRecord
     params.require(:example).permit(:text)
   end
 
-  def query_string_authenticate
-    token = params[:token]
-    @current_user = AUTH_PROC.call(token)
-    head :unauthorized unless current_user
-  end
-  private :set_example, :example_params, :query_string_authenticate
+  private :set_example, :example_params
 end
