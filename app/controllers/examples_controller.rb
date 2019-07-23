@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
-class ExamplesController < ApplicationRecord
+class ExamplesController < OpenReadController
   before_action :set_example, only: %i[update destroy]
+
   # GET /examples
   # GET /examples.json
   def index
