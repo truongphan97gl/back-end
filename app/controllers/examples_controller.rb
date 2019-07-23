@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class ExamplesController < ProtectedController
+class ExamplesController < ApplicationRecord
   before_action :set_example, only: %i[update destroy]
   before_action :query_string_authenticate
   # GET /examples
