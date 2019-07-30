@@ -3,7 +3,7 @@ class EventsController < ProtectedController
 
   # GET /events
   def index
-    @events = current_user.events.all.order('id ASC')
+    @events = current_user.events.all.order('date ASC')
 
     render json: @events
   end
